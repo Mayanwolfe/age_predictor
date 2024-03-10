@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Prediction App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Age Prediction App</h1>
+
+  <form id="agePredictionForm" onsubmit="event.preventDefault(); getPredictedAge();">
+      <label for="name">First Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="country">Country Code, 2 Letters (Optional):</label>
+      <input type="text" id="country" name="country" pattern="[A-Za-z]{2}" title="Two letter country code">
+
+    <button type="submit">Predict Age</button>
+  </form>
+
+  <div id="result" aria-live="polite"></div>
+
+  <button type="button" onclick="resetForm()">Reset</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
